@@ -40,5 +40,5 @@ params:
   mobileMenu: true
   poweredby: false
   realfavicongenerator: true
-  sidebar: true
+  sidebar: false
   submitted: true

@@ -1,5 +1,5 @@
 ---
-title: "Making 3D Graphcis Fun Again"
+title: "Making 3D Graphics Fun Again"
 
 ---
 
