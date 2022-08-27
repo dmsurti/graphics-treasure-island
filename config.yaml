@@ -1,0 +1,44 @@
+---
+title: "Making 3D Graphics Fun Again"
+baseURL: "https://www.deepaksurti.com"
+theme: "zen"
+languageCode: "en-GB"
+defaultContentLanguage: "en"
+pluralizelisttitles: false
+removePathAccents: true
+paginate: 10
+paginatePath: "page"
+rssLimit: 20
+author:
+  name: "Deepak Surti"
+  url: "https://www.deepaksurti.com"
+  avatar: "/images/My-Memoji.jpg"
+
+outputFormats:
+  SearchIndex:
+    mediaType: "application/json"
+    baseName: "searchindex"
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+  home: ["HTML","RSS", "JSON", "SearchIndex"]
+  section: ["HTML","RSS", "JSON"]
+
+params:
+  contact: "info@example.org"
+  copyright: "Copyright Deepak Surti"
+  description: "3D Graphics Treasure Island."
+  dateformat: "2 May, 1977"
+  favicon: "apple-touch-icon.png"
+  feedlinks: true
+  footer: "Powered by [Hugo](https://gohugo.io/) and the [Zen theme](https://github.com/frjo/hugo-theme-zen)."
+  icon: "apple-touch-icon.png"
+  image: "apple-touch-icon.png"
+  imageMaxWidth: 400
+  logoWidth: 64
+  mobileMenu: true
+  poweredby: false
+  realfavicongenerator: true
+  sidebar: true
+  submitted: true
