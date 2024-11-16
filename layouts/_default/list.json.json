@@ -1,10 +1,15 @@
-{{- $pctx := . -}}
-{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
-{{- $pages := $pctx.RegularPages -}}
-{{- $limit := site.Config.Services.RSS.Limit -}}
-{{- if ge $limit 1 -}}
-{{- $pages = $pages | first $limit -}}
-{{- end -}}
+{{- $pctx := . }}
+{{- if .IsHome }}{{ $pctx = .Site }}{{ end }}
+{{- $pages := slice }}
+{{- if or $.IsHome $.IsSection }}
+{{- $pages = $pctx.RegularPages }}
+{{- else }}
+{{- $pages = $pctx.Pages }}
+{{- end }}
+{{- $limit := .Site.Config.Services.RSS.Limit }}
+{{- if ge $limit 1 }}
+{{- $pages = $pages | first $limit }}
+{{- end }}
 {{ $length := (len $pages) -}}
 {
     "version": "https://jsonfeed.org/version/1.1",
@@ -23,11 +28,11 @@
     {{ with $.Param "favicon" -}}
     "favicon": "{{ . | absURL }}",
     {{ end -}}
-    {{ with site.Author.name -}}
+    {{ with site.Params.author.name -}}
     "authors": [
         {
-            "name": "{{ . }}"{{ with site.Author.url }},
-            "url": "{{ . }}"{{ end }}{{ with site.Author.avatar }},
+            "name": "{{ . }}"{{ with site.Params.author.url }},
+            "url": "{{ . }}"{{ end }}{{ with site.Params.author.avatar }},
             "avatar": "{{ . | absURL }}"{{ end }}
         }
     ],

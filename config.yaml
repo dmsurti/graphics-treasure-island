@@ -6,13 +6,10 @@ languageCode: "en-GB"
 defaultContentLanguage: "en"
 pluralizelisttitles: false
 removePathAccents: true
-paginate: 10
-paginatePath: "page"
+pagination:
+  pagerSize: 10
+  path: page
 rssLimit: 20
-author:
-  name: "Deepak Surti"
-  url: "https://www.deepaksurti.com"
-  avatar: "/images/My-Memoji.jpg"
 
 outputFormats:
   SearchIndex:
@@ -26,6 +23,7 @@ outputs:
   section: ["HTML","RSS", "JSON"]
 
 params:
+  cookieConsent: true
   contact: "info@example.org"
   copyright: "Copyright Deepak Surti"
   description: "3D Graphics Treasure Island."
@@ -37,8 +35,25 @@ params:
   image: "apple-touch-icon.png"
   imageMaxWidth: 400
   logoWidth: 64
+  logoHeight: 64
   mobileMenu: true
   poweredby: false
   realfavicongenerator: true
   sidebar: false
   submitted: true
+  author:
+    name: "Deepak Surti"
+    url: "https://www.deepaksurti.com"
+    avatar: "/images/logo.jpg"
+menu:
+  main:
+    - Name: "Home"
+      weight: -10
+      pageRef: "/"
+    - Name: "Projects"
+      weight: 2
+      pageRef: "/projects/"
+
+params:
+  customCSS:
+    - css/custom.css
