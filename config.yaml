@@ -53,6 +53,9 @@ menu:
     - Name: "Projects"
       weight: 2
       pageRef: "/projects/"
+    - Name: "The Funny Cow"
+      weight: 3
+      pageRef: "/thefunnycow/"
 
 params:
   customCSS:
