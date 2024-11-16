@@ -3,7 +3,7 @@ title: "Making 3D Graphics Fun Again"
 
 ---
 
-# About
+![me](/images/me.jpg)
 
 Hello! My name is Deepak Surti. I am a Software Engineer with a focus on 3D Graphics and it's
 applications across various domains. I am lucky that I am paid to work on 3D Graphics which also
